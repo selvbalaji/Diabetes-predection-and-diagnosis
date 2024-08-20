@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" id="result-form">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Results</title>
+    <link rel="stylesheet" href="static/result.css">
+</head>
+<body id="result-table-body">
+    <div class="container" id="results">
+        <header>
+            <h1>Diabetic Results</h1>
+        </header>
+        <main>
+            <section class="results-details">
+                <h2>Detailed Results</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Age</th>
+                            <th>Body Mass Index</th>
+                            <th>High Blood Pressure</th>
+                            <th>High Cholesterol</th>
+                            <th>Physical Activity</th>
+                            <th>Smoking Status</th>
+                            <th>Heavy Alcohol Consumption</th>
+                            <th>Heart Disease or Attack History</th>
+                            <th>General Health Status</th>
+                            <th>Mental Health Status</th>
+                            <th>Gender</th>
+                            <th>Income Level</th>
+                        </tr>
+                    </thead>
+                    <tbody class="result-row">
+                        <tr>
+                            <td>{{ input_data['Age'] }}</td>
+                            <td>{{ input_data['BMI'] }}</td>
+                            <td>{{ input_data['HighBP'] }}</td>
+                            <td>{{ input_data['HighChol'] }}</td>
+                            <td>{{ input_data['PhysActivity'] }}</td>
+                            <td>{{ input_data['Smoker'] }}</td>
+                            <td>{{ input_data['HvyAlcoholConsump'] }}</td>
+                            <td>{{ input_data['HeartDiseaseorAttack'] }}</td>
+                            <td>{{ input_data['GenHlth'] }}</td>
+                            <td>{{ input_data['MentHlth'] }}</td>
+                            <td>{{ input_data['Sex'] }}</td>
+                            <td>{{ input_data['Income'] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="results-summary">
+                <h2>Summary</h2>
+                <p><span class="name">{{ result_class }}</span></p>
+            </section>
+            <section class="results-recommendations">
+                <h2>Recommendations</h2>
+                <p>{{ recommendations }}</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Diabetic Management System. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
